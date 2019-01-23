@@ -42,4 +42,7 @@
     <string name="tvMelapor">Melapor kejadian</string>
     <string name="tvBelumPernah">Bapak/Ibu belum pernah melaporkan kejadian. Untuk melapor, silakan menekan tombol di bawah ini.</string>
     <string name="tvLaporkanKeluhan">Laporkan Keluhan</string>
+    <string name="tvLokasiFoto">Lokasi pengambilan foto</string>
+    <string name="tvBuatLaporSebelumUpload">Bapak/Ibu dapat melaporkan permasalahan sekolah atau putra/i anda. Masukan di bawah tidak wajib. Silakan diisi sesuai kebutuhan.</string>
+    <string name="tvLaporFeedback">Fasilitas sekolah kurang memadahi</string>
 </resources>

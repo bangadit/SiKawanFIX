@@ -30,8 +30,9 @@
         <activity android:name=".ProfilActivity" />
         <activity android:name=".DaftarLaporanActivity" />
         <activity android:name=".UbahPasswordActivity" />
-        <activity android:name=".LaporActivity"></activity>
-        <activity android:name=".LaporLanjutanActivity"></activity>
+        <activity android:name=".LaporActivity" />
+        <activity android:name=".LaporLanjutanActivity" />
+        <activity android:name=".LaporFeedback"></activity>
     </application>
 
 </manifest>
