@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".LaporActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/ToolbarAtas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:elevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ic_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/normal"
+                android:text="@string/tvLapor"
+                android:textColor="@color/colorBlue"
+                android:textSize="@dimen/sp20"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_back"
+                app:layout_constraintStart_toEndOf="@+id/ic_back"
+                app:layout_constraintTop_toTopOf="@+id/ic_back" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tvMelapor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/normal"
+        android:text="@string/tvMelapor"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/sp20"
+        app:layout_constraintBottom_toTopOf="@+id/tvBelumPernah"
+        app:layout_constraintEnd_toEndOf="@+id/tvBelumPernah"
+        app:layout_constraintStart_toStartOf="@+id/tvBelumPernah"
+        app:layout_constraintTop_toBottomOf="@+id/ToolbarAtas"
+        app:layout_constraintVertical_bias="0.49" />
+
+    <TextView
+        android:id="@+id/tvBelumPernah"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/normal"
+        android:text="@string/tvBelumPernah"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toTopOf="@+id/btnLaporkanKeluhan"
+        app:layout_constraintEnd_toEndOf="@+id/btnLaporkanKeluhan"
+        app:layout_constraintStart_toStartOf="@+id/btnLaporkanKeluhan"
+        app:layout_constraintTop_toBottomOf="@+id/tvMelapor" />
+
+    <Button
+        android:id="@+id/btnLaporkanKeluhan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:background="@drawable/color_btn"
+        android:text="@string/tvLaporkanKeluhan"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+
+</android.support.constraint.ConstraintLayout>

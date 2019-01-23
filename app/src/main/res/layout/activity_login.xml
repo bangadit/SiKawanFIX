@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".LoginActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnMasuk"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/padding"
+            android:paddingBottom="@dimen/padding">
+
+            <TextView
+                android:id="@+id/tvMasuk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/normal"
+                android:text="@string/tvMasuk"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/sp24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSilahkan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/normal"
+                android:text="@string/tvSilahkan"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintTop_toBottomOf="@+id/tvMasuk" />
+
+            <TextView
+                android:id="@+id/tvNISN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/normal"
+                android:text="@string/tvNISN"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintTop_toBottomOf="@+id/tvSilahkan" />
+
+            <EditText
+                android:id="@+id/edtNISN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/background_edt"
+                android:fontFamily="@font/normal"
+                android:hint="@string/tvHintTuliskan"
+                android:inputType="text"
+                android:padding="@dimen/padding16"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text12"
+                app:layout_constraintTop_toBottomOf="@+id/tvNISN" />
+
+            <TextView
+                android:id="@+id/tvPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding"
+                android:fontFamily="@font/normal"
+                android:text="@string/tvPassword"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintTop_toBottomOf="@+id/edtNISN" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edtPasswordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/tvPassword"
+                app:passwordToggleEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_edt"
+                    android:fontFamily="@font/normal"
+                    android:hint="@string/tvHintPassword"
+                    android:inputType="textPassword"
+                    android:padding="@dimen/padding16"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text12" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnMasuk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/color_btn"
+        android:fontFamily="@font/normal"
+        android:text="@string/tvMasuk"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
