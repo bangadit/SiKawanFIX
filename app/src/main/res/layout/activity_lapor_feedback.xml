@@ -48,8 +48,168 @@
     </android.support.v7.widget.Toolbar>
 
     <ImageView
+        android:id="@+id/ivgambarlaporan"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ToolbarAtas"
+        android:src="@drawable/gambar_laporan"
+        app:layout_constraintStart_toStartOf="@id/ToolbarAtas"
+        app:layout_constraintEnd_toEndOf="@id/ToolbarAtas"
+        android:layout_marginTop="16dp"
+        app:layout_constraintCircleRadius="10dp" />
+
+    <TextView
+        android:id="@+id/tvFasilitasSekolah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvLaporFeedback"
+        app:layout_constraintTop_toBottomOf="@id/ivgambarlaporan"
+        app:layout_constraintStart_toStartOf="@id/ivgambarlaporan"
+        app:layout_constraintEnd_toEndOf="@id/ivgambarlaporan"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/bold"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvStatusLaporan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvStatusLaporan"
+        app:layout_constraintTop_toBottomOf="@id/ivgambarlaporan"
+        app:layout_constraintStart_toStartOf="@id/ivgambarlaporan"
+        android:layout_marginTop="56dp"
+        android:textSize="13sp"
+        android:fontFamily="@font/bold" />
+
+    <ImageView
+        android:id="@+id/ivStatusLaporan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/status_laporan"
+        app:layout_constraintEnd_toEndOf="@+id/tvStatusLaporan"
+        app:layout_constraintStart_toStartOf="@string/tvStatusLaporan"
+        app:layout_constraintTop_toBottomOf="@id/tvStatusLaporan" />
+
+    <TextView
+        android:id="@+id/tvStatusLaporanGambar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:text="@string/tvMenunggu"
+        app:layout_constraintTop_toBottomOf="@id/tvStatusLaporan"
+        app:layout_constraintLeft_toRightOf="@id/ivStatusLaporan"
+        app:layout_constraintTop_toTopOf="@id/ivStatusLaporan"
+        app:layout_constraintBottom_toBottomOf="@id/ivStatusLaporan"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/normal"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tvDeskripsiLaporan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvStatusLaporan"
+        app:layout_constraintTop_toBottomOf="@id/tvStatusLaporan"
+        app:layout_constraintStart_toStartOf="@id/tvStatusLaporan"
+        android:layout_marginTop="56dp"
+        android:textSize="13sp"
+        android:fontFamily="@font/bold" />
+
+    <TextView
+        android:id="@+id/tvIsiDeskripsiLaporan"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tvIsiDeskripsiLap"
+        android:fontFamily="@font/normal"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvDeskripsiLaporan"
+        app:layout_constraintTop_toBottomOf="@id/tvDeskripsiLaporan" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/ToolbarBawah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp">
+
+            <ImageView
+                android:id="@+id/btnHome"
+                android:layout_width="wrap_content"
+                android:layout_height="24.71dp"
+                android:src="@drawable/ic_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnLaporan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Home"
+                android:layout_marginTop="2dp"
+                android:textSize="9sp"
+                android:fontFamily="@font/normal"
+                app:layout_constraintEnd_toEndOf="@id/btnHome"
+                app:layout_constraintStart_toStartOf="@+id/btnHome"
+                app:layout_constraintTop_toBottomOf="@id/btnHome"/>
+
+            <ImageView
+                android:id="@+id/btnLaporan"
+                android:layout_width="wrap_content"
+                android:layout_height="24.71dp"
+                android:src="@drawable/ic_daftar_laporan_biru"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnProfil"
+                app:layout_constraintStart_toEndOf="@+id/btnHome"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Daftar Laporan"
+                android:fontFamily="@font/normal"
+                android:textSize="9dp"
+                android:layout_marginTop="2dp"
+                app:layout_constraintEnd_toEndOf="@id/btnLaporan"
+                app:layout_constraintStart_toStartOf="@id/btnLaporan"
+                android:gravity="center"/>
+
+            <ImageView
+                android:id="@+id/btnProfil"
+                android:layout_width="wrap_content"
+                android:layout_height="24.71dp"
+                android:src="@drawable/ic_profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnLaporan"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Profil"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:fontFamily="@font/normal"
+                android:textSize="9dp"
+                android:layout_marginTop="2dp"
+                app:layout_constraintEnd_toEndOf="@id/btnProfil"
+                app:layout_constraintStart_toStartOf="@id/btnProfil"
+                android:gravity="center"/>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.Toolbar>
 
 
 </android.support.constraint.ConstraintLayout>
