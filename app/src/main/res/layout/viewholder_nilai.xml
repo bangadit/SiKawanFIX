@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/nilai_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/normal"
+        android:text="@string/tanggalNilai"
+        android:textColor="@color/colorBlack"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/jenisNilai1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="32dp"
+        android:fontFamily="@font/normal"
+        android:text="@string/jenisNilai"
+        android:textColor="@color/colorBlack"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nilai_1"
+        app:layout_constraintStart_toEndOf="@+id/nilai_1"
+        app:layout_constraintTop_toTopOf="@+id/nilai_1" />
+
+    <TextView
+        android:id="@+id/matpel1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="32dp"
+        android:fontFamily="@font/normal"
+        android:text="@string/tvMatpel"
+        android:textColor="@color/colorBlack"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/jenisNilai1"
+        app:layout_constraintStart_toEndOf="@+id/jenisNilai1"
+        app:layout_constraintTop_toTopOf="@+id/jenisNilai1" />
+
+    <TextView
+        android:id="@+id/nilaimatpel1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="32dp"
+        android:fontFamily="@font/normal"
+        android:text="@string/tvNilaiMatpel"
+        android:textColor="@color/colorBlack"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/matpel1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/matpel1" />
+
+</android.support.constraint.ConstraintLayout>

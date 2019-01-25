@@ -10,6 +10,7 @@ data class ProfilModel(
         @SerializedName("alamat") val alamat: String?,
         @SerializedName("email") val email: String?,
         @SerializedName("sekolah_id") val sekolah_id: String?,
+        @SerializedName("nama_sekolah") val nama_sekolah: String?,
         @SerializedName("created_at") val created_at: String?,
         @SerializedName("updated_at") val updated_at: String?,
         @SerializedName("role") val role: String?,

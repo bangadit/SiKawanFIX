@@ -62,7 +62,7 @@ class ProfilActivity : AppCompatActivity() {
 
                         tvName.text = respone?.nama_murid
                         tvNISN.text = respone?.username
-                        tvSekolah.text = respone?.sekolah_id
+                        tvSekolah.text = respone?.nama_sekolah
                     }
 
                 })

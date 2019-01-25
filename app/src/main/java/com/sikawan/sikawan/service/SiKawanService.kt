@@ -4,6 +4,7 @@ import com.sikawan.sikawan.DetailLaporActivity
 import com.sikawan.sikawan.lapor.DetailLaporRespon
 import com.sikawan.sikawan.lapor.LaporModel
 import com.sikawan.sikawan.lapor.LaporRespone
+import com.sikawan.sikawan.nilai.NilaiRespone
 import com.sikawan.sikawan.profil.ProfilModel
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -32,6 +33,9 @@ interface SiKawanService {
 
     @GET("public/api/v1/cek-lapor")
     fun getLapor(): Call<LaporRespone>
+
+    @GET("public/api/v1/get-nilai-user")
+    fun getNilai(): Call<NilaiRespone>
 
     @GET("public/api/v1/get-lapor-detail/{id}")
     fun searchLapor(@Path("id") id: Int): Call<DetailLaporRespon>
