@@ -1,10 +1,12 @@
 package com.sikawan.sikawan.service
 
+import com.sikawan.sikawan.profil.ProfilModel
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Path
 
 interface SiKawanService {
     //path untuk base URL
@@ -21,6 +23,9 @@ interface SiKawanService {
     @POST("public/api/v1/auth/login")
     fun postLogin(@Body body: RequestBody): Call<LoginRespone>
 
+    @GET("public/api/v1/get-my-profile")
+    fun getProfil() : Call<ProfilModel>
+
 //    @GET("public/api/v1/get-my-profile")
-//    fun getAllPost() : Call<List<Post>>
+//    fun getAllPost() : Call<List<Post>
 }

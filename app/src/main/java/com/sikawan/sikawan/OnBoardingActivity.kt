@@ -12,6 +12,7 @@ import android.os.Handler
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
+import android.support.v4.content.ContextCompat
 import android.support.v4.view.ViewPager
 import com.sikawan.sikawan.fragments.OnBoardingFragment
 import kotlinx.android.synthetic.main.activity_on_boarding.*
@@ -104,19 +105,19 @@ class OnBoardingActivity : AppCompatActivity() {
 
                 when (view_pager.currentItem) {
                     0 -> {
-                        indicator1.setTextColor(Color.BLUE)
+                        indicator1.setTextColor(ContextCompat.getColor(this@OnBoardingActivity, R.color.colorBlue))
                         indicator2.setTextColor(Color.GRAY)
                         indicator3.setTextColor(Color.GRAY)
                     }
                     1 -> {
                         indicator1.setTextColor(Color.GRAY)
-                        indicator2.setTextColor(Color.BLUE)
+                        indicator2.setTextColor(ContextCompat.getColor(this@OnBoardingActivity, R.color.colorBlue))
                         indicator3.setTextColor(Color.GRAY)
                     }
                     2 -> {
                         indicator1.setTextColor(Color.GRAY)
                         indicator2.setTextColor(Color.GRAY)
-                        indicator3.setTextColor(Color.BLUE)
+                        indicator3.setTextColor(ContextCompat.getColor(this@OnBoardingActivity, R.color.colorBlue))
                     }
                 }
             }

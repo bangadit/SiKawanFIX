@@ -9,8 +9,8 @@ import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
-import com.sikawan.sikawan.service.ClientInstance
 import com.sikawan.sikawan.service.LoginRespone
 import com.sikawan.sikawan.service.SiKawanService
 import kotlinx.android.synthetic.main.activity_login.*
@@ -22,6 +22,8 @@ class LoginActivity : AppCompatActivity() {
 
     lateinit var preference: SharedPreferences
     val pref_show = "SiKawanLogin"
+    val pref_token = "GetData"
+
     lateinit var activity: Activity
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,12 +43,13 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
-    fun masuk() {
+    fun masuk(token: String) {
         val intent = Intent(this@LoginActivity, HomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
         val editor = preference.edit()
         editor.putBoolean(pref_show, false)
+        editor.putString(pref_token, token)
         editor.apply()
         finish()
     }
@@ -58,14 +61,13 @@ class LoginActivity : AppCompatActivity() {
 
         val username = edtNISN.text.toString()
         val password = edtPassword.text.toString()
-        val siKawanService = ClientInstance.retrofit.create(SiKawanService::class.java)
         val requestBody = MultipartBody.Builder()
             .setType(MultipartBody.FORM)
             .addFormDataPart("username", username)
             .addFormDataPart("password", password)
             .build()
 
-        siKawanService.postLogin(requestBody)
+        MainApplication.service.postLogin(requestBody)
             .enqueue(object : retrofit2.Callback<LoginRespone> {
                 override fun onFailure(call: Call<LoginRespone>?, t: Throwable?) {
                     val toast =
@@ -79,13 +81,18 @@ class LoginActivity : AppCompatActivity() {
                     val loginRespone = response?.body()
 
                     if (loginRespone?.message == "Login Successful") {
-                        masuk()
+                        masuk(loginRespone.access_token)
                         mDialog.dismiss()
                     } else {
                         val dialog = AlertDialog.Builder(this@LoginActivity)
                         val dialogView = layoutInflater.inflate(R.layout.activity_alert, null)
                         dialog.setView(dialogView)
-                        dialog.show()
+                        val buttonFinish = dialogView.findViewById<Button>(R.id.btnCoba)
+                        val dialogShow = dialog.show()
+
+                        buttonFinish.setOnClickListener {
+                            dialogShow.dismiss()
+                        }
                         mDialog.dismiss()
                     }
 

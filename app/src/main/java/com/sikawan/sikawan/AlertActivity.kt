@@ -14,7 +14,7 @@ class AlertActivity : AppCompatActivity() {
         setContentView(R.layout.activity_alert)
 
         btnCoba.setOnClickListener {
-            super.finish()
+            this@AlertActivity
         }
     }
 }
