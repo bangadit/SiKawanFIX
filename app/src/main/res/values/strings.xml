@@ -60,4 +60,6 @@
     <string name="tvStatus">Menunggu</string>
     <string name="tvDeskripsi">Deskripsi Laporan</string>
     <string name="tvISI">Kursi dan meja yang tersedia tidak sesuai jumlah murid.</string>
+    <string name="tvBalasan">Balasan</string>
+    <string name="tvIsiBalasan">Isi Balasan</string>
 </resources>
