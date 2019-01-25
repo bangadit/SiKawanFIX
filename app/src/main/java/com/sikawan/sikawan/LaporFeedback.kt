@@ -1,8 +1,9 @@
 package com.sikawan.sikawan
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_lapor_lanjutan.*
+import kotlinx.android.synthetic.main.activity_lapor_feedback.*
 
 class LaporFeedback : AppCompatActivity() {
 
@@ -10,8 +11,9 @@ class LaporFeedback : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lapor_feedback)
 
-        ic_back.setOnClickListener {
-            finish()
+        btnKembali.setOnClickListener {
+            val intent = Intent(this@LaporFeedback, DaftarLaporanActivity::class.java)
+            startActivity(intent)
         }
     }
 }

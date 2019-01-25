@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".Nilai">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/ToolbarAtas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:elevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ic_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/normal"
+                android:text="@string/nilai"
+                android:textColor="@color/colorBlue"
+                android:textSize="@dimen/sp20"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_back"
+                app:layout_constraintStart_toEndOf="@+id/ic_back"
+                app:layout_constraintTop_toTopOf="@+id/ic_back" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/vgaris"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        android:background="#ece8e8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ToolbarAtas" />
+
+    <TextView
+        android:id="@+id/tvTahunAjaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/bold"
+        android:padding="4dp"
+        android:text="@string/tahunAjaran"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vgaris" />
+
+    <TextView
+        android:id="@+id/tvtahun"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="32dp"
+        android:background="@drawable/bg_polos"
+        android:fontFamily="@font/bold"
+        android:padding="4dp"
+        android:text="@string/_2018_2019"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvTahunAjaran"
+        app:layout_constraintLeft_toRightOf="@id/tvTahunAjaran"
+        app:layout_constraintTop_toTopOf="@id/tvTahunAjaran" />
+
+    <TextView
+        android:id="@+id/tvganjil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/bold"
+        android:padding="4dp"
+        android:text="@string/semester"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tvTahunAjaran"
+        app:layout_constraintTop_toBottomOf="@id/tvTahunAjaran" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_polos"
+        android:fontFamily="@font/bold"
+        android:padding="4dp"
+        android:text="@string/ganjil"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvganjil"
+        app:layout_constraintLeft_toRightOf="@id/tvganjil"
+        app:layout_constraintStart_toStartOf="@+id/tvtahun"
+        app:layout_constraintTop_toTopOf="@id/tvganjil" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvUas"
+        android:layout_width="140dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="20dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintStart_toStartOf="@id/ToolbarAtas"
+        app:layout_constraintTop_toBottomOf="@id/ToolbarAtas">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/iuas"
+                android:layout_width="62.5dp"
+                android:layout_height="83.5dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/ic_nilai"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/normal"
+                android:text="@string/uas"
+                android:textColor="@color/colorBlue"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/iuas"
+                app:layout_constraintStart_toStartOf="@id/iuas"
+                app:layout_constraintTop_toBottomOf="@id/iuas" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvMid"
+        android:layout_width="140dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="@id/ToolbarAtas"
+        app:layout_constraintLeft_toRightOf="@id/cvUas"
+        app:layout_constraintTop_toBottomOf="@id/ToolbarAtas">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/iMid"
+                android:layout_width="62.5dp"
+                android:layout_height="83.5dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/white"
+                android:src="@drawable/ic_nilai"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/normal"
+                android:text="@string/mid"
+                android:textColor="@color/colorBlue"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/iMid"
+                app:layout_constraintStart_toStartOf="@id/iMid"
+                app:layout_constraintTop_toBottomOf="@id/iMid" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvQuiz"
+        android:layout_width="140dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="10dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="@id/cvUas"
+        app:layout_constraintStart_toStartOf="@id/cvUas"
+        app:layout_constraintTop_toBottomOf="@id/cvUas">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/iQuiz"
+                android:layout_width="62.5dp"
+                android:layout_height="83.5dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/ic_nilai"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/normal"
+                android:text="@string/quiz"
+                android:textColor="@color/colorBlue"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/iQuiz"
+                app:layout_constraintStart_toStartOf="@id/iQuiz"
+                app:layout_constraintTop_toBottomOf="@id/iQuiz" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvTugas"
+        android:layout_width="140dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="10dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="@id/cvMid"
+        app:layout_constraintTop_toBottomOf="@id/cvMid">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/iTugas"
+                android:layout_width="62.5dp"
+                android:layout_height="83.5dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/ic_nilai"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/normal"
+                android:text="@string/tugas"
+                android:textColor="@color/colorBlue"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/iTugas"
+                app:layout_constraintStart_toStartOf="@id/iTugas"
+                app:layout_constraintTop_toBottomOf="@id/iTugas" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

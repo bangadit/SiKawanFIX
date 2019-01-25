@@ -65,4 +65,62 @@
     <string name="tuliskan_keluhan_anda">Tuliskan keluhan anda</string>
     <string name="deskripsi_keluhan">Deskripsi keluhan</string>
     <string name="judul_keluhan">Judul keluhan</string>
+    <string name="lihat_daftar">LIHAT DAFTAR</string>
+    <string name="nilai">Nilai</string>
+
+    <string name="tahunAjaran">Tahun Ajaran:</string>
+    <string name="semester">Semester :</string>
+    <string name="_2018_2019">2018 / 2019</string>
+    <string name="ganjil">Ganjil</string>
+
+    <string name="tugas">Tugas</string>
+    <string name="uas">UAS</string>
+    <string name="quiz">Quiz</string>
+    <string name="mid">MID</string>
+
+    <string name="sen">Sen</string>
+    <string name="sel">Sel</string>
+    <string name="rab">Rab</string>
+    <string name="kam">Kam</string>
+    <string name="jum">Jum</string>
+    <string name="sab">Sab</string>
+    <string name="min">Min</string>
+    <string name="hadir">Hadir</string>
+    <string name="tdkPenuh">Tidak Penuh</string>
+    <string name="sakit">Sakit / Ijin</string>
+    <string name="alpa">Tanpa Keterangan</string>
+    <string name="satu">1</string>
+    <string name="enam">6</string>
+    <string name="tuju">7</string>
+    <string name="delap">8</string>
+    <string name="dua">2</string>
+    <string name="sem">9</string>
+    <string name="sepuluh">10</string>
+    <string name="sebel">11</string>
+    <string name="tiga">3</string>
+    <string name="duabel">12</string>
+    <string name="tigabel">13</string>
+    <string name="empatbel">14</string>
+    <string name="empat">4</string>
+    <string name="lima">5</string>
+    <string name="limabel">15</string>
+    <string name="enambel">16</string>
+    <string name="tujubel">17</string>
+    <string name="delabel">18</string>
+    <string name="sembel">19</string>
+    <string name="duapul">20
+    </string>
+    <string name="duasatu">21</string>
+    <string name="duadua">22</string>
+    <string name="duatiga">23</string>
+    <string name="duaemp">24</string>
+    <string name="dualim">25</string>
+    <string name="duaena">26</string>
+    <string name="duatuj">27</string>
+    <string name="duadel">28
+    </string>
+    <string name="duasem">29</string>
+    <string name="tigapul">30</string>
+
+
 </resources>

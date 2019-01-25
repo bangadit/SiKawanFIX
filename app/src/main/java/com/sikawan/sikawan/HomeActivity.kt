@@ -31,6 +31,16 @@ class HomeActivity : AppCompatActivity(), NilaiView {
         nilaiPresenter = NilaiPresenter(MainApplication.service,this)
         nilaiPresenter.getAllNilai()
 
+        crdNilai.setOnClickListener {
+            val intent = Intent(this@HomeActivity, Nilai::class.java)
+            startActivity(intent)
+        }
+
+        crdPresensi.setOnClickListener {
+            val intent = Intent(this@HomeActivity, Presensi::class.java)
+            startActivity(intent)
+        }
+
         crdLapor.setOnClickListener {
             val intent = Intent(this@HomeActivity, LaporActivity::class.java)
             startActivity(intent)

@@ -21,15 +21,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/ic_back"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -37,10 +28,7 @@
                 android:fontFamily="@font/normal"
                 android:text="@string/tvLapor"
                 android:textColor="@color/colorBlue"
-                android:textSize="@dimen/sp20"
-                app:layout_constraintBottom_toBottomOf="@+id/ic_back"
-                app:layout_constraintStart_toEndOf="@+id/ic_back"
-                app:layout_constraintTop_toTopOf="@+id/ic_back" />
+                android:textSize="@dimen/sp20"/>
 
 
         </android.support.constraint.ConstraintLayout>
@@ -86,12 +74,9 @@
         android:id="@+id/ivStatusLaporan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/status_laporan"
-        app:layout_constraintEnd_toEndOf="@+id/tvStatusLaporan"
-        app:layout_constraintStart_toStartOf="@string/tvStatusLaporan"
+        app:layout_constraintStart_toStartOf="@+id/tvStatusLaporan"
         app:layout_constraintTop_toBottomOf="@id/tvStatusLaporan" />
 
     <TextView
@@ -123,111 +108,27 @@
         android:id="@+id/tvIsiDeskripsiLaporan"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/normal"
         android:text="@string/tvIsiDeskripsiLap"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@id/tvDeskripsiLaporan"
         app:layout_constraintTop_toBottomOf="@id/tvDeskripsiLaporan" />
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/ToolbarBawah"
+    <Button
+        android:id="@+id/btnKembali"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorWhite"
-        android:elevation="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/color_btn"
+        android:text="@string/lihat_daftar"
+        android:fontFamily="@font/normal"
+        android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="16dp">
-
-            <ImageView
-                android:id="@+id/btnHome"
-                android:layout_width="0dp"
-                android:layout_height="25dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/ic_home"
-                app:layout_constraintEnd_toStartOf="@+id/imgHome"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tvHome"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="@font/normal"
-                android:gravity="center"
-                android:text="@string/tvHome"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="9sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@id/btnHome"
-                app:layout_constraintStart_toStartOf="@+id/btnHome"
-                app:layout_constraintTop_toBottomOf="@id/btnHome" />
-
-            <ImageView
-                android:id="@+id/imgHome"
-                android:layout_width="0dp"
-                android:layout_height="25dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/ic_daftar_laporan_biru"
-                app:layout_constraintEnd_toStartOf="@+id/imgProfil"
-                app:layout_constraintStart_toEndOf="@+id/btnHome"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tvDaftarLaporan"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="@font/normal"
-                android:gravity="center"
-                android:text="@string/tvDaftarLaporan"
-                android:textColor="@color/colorBlue"
-                android:textSize="9sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/imgHome"
-                app:layout_constraintStart_toEndOf="@+id/tvHome"
-                app:layout_constraintTop_toBottomOf="@+id/imgHome" />
-
-            <ImageView
-                android:id="@+id/imgProfil"
-                android:layout_width="0dp"
-                android:layout_height="25dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/ic_profile"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgHome"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tvProfil"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="@font/normal"
-                android:gravity="center"
-                android:text="@string/tvProfil"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="9sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvDaftarLaporan"
-                app:layout_constraintTop_toBottomOf="@+id/imgProfil" />
-
-
-        </android.support.constraint.ConstraintLayout>
-
-
-    </android.support.v7.widget.Toolbar>
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.sikawan.sikawan.R
+import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.viewholder_nilai.view.*
 
 class NilaiAdapter(val data: List<NilaiModel>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -46,10 +47,9 @@ class NilaiAdapter(val data: List<NilaiModel>, val context: Context) : RecyclerV
         }
 
         fun bindView(data: NilaiModel) {
-            textTanggal?.text = data.created_at
-            textTugas?.text = data.id_ujian
-            textPelajaran?.text = data.id_mapel
             textNilai?.text = data.nilai
+            textTugas?.text = data.id_ujian
+            textPelajaran?.text = data.mapel_id
         }
     }
 }
