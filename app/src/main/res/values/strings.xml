@@ -62,4 +62,7 @@
     <string name="tvISI">Kursi dan meja yang tersedia tidak sesuai jumlah murid.</string>
     <string name="tvBalasan">Balasan</string>
     <string name="tvIsiBalasan">Isi Balasan</string>
+    <string name="tuliskan_keluhan_anda">Tuliskan keluhan anda</string>
+    <string name="deskripsi_keluhan">Deskripsi keluhan</string>
+    <string name="judul_keluhan">Judul keluhan</string>
 </resources>

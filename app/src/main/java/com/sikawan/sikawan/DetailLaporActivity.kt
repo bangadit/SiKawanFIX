@@ -44,7 +44,11 @@ class DetailLaporActivity : AppCompatActivity() {
         tvFasilitasSekolah.text = data?.judul
         tvIsi.text = data?.isi
         tvStatus.text = data?.status
-        tvIsiBalasan.text = data?.balasan
+        if (data?.balasan == null){
+            tvIsiBalasan.text = "Belum Dibalas"
+        }else{
+            tvIsiBalasan.text = data?.balasan
+        }
         Picasso.get().load(data?.gambar).into(fotokelas)
     }
 }

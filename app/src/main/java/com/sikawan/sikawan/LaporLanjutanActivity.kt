@@ -3,7 +3,6 @@ package com.sikawan.sikawan
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import kotlinx.android.synthetic.main.activity_lapor_lanjutan.*
 
 class LaporLanjutanActivity : AppCompatActivity() {
@@ -17,10 +16,10 @@ class LaporLanjutanActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-    }
+        ic_back.setOnClickListener {
+            finish()
+        }
 
-    fun back(view: View) {
-        finish()
     }
 
 

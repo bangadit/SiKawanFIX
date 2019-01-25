@@ -8,10 +8,7 @@ import com.sikawan.sikawan.nilai.NilaiRespone
 import com.sikawan.sikawan.profil.ProfilModel
 import okhttp3.RequestBody
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface SiKawanService {
     //path untuk base URL
@@ -33,6 +30,8 @@ interface SiKawanService {
 
     @GET("public/api/v1/cek-lapor")
     fun getLapor(): Call<LaporRespone>
+
+
 
     @GET("public/api/v1/get-nilai-user")
     fun getNilai(): Call<NilaiRespone>
