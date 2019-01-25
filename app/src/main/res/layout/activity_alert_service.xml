@@ -5,25 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context=".AlertActivity">
+    tools:context=".AlertServiceActivity">
 
     <ImageView
         android:id="@+id/imgAlert"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_alert"
-        app:layout_constraintBottom_toTopOf="@+id/tvSepertinya"
+        android:src="@drawable/ic_alert_service"
+        app:layout_constraintBottom_toTopOf="@+id/tvServerError"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvSepertinya"
+        android:id="@+id/tvServerError"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/normal"
         android:padding="@dimen/padding16"
-        android:text="@string/tvSepertinya"
+        android:text="@string/tvServerError"
         android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/btnCoba"
         app:layout_constraintTop_toBottomOf="@+id/imgAlert" />
@@ -38,6 +38,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSepertinya" />
+        app:layout_constraintTop_toBottomOf="@+id/tvServerError" />
 
 </android.support.constraint.ConstraintLayout>

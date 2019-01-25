@@ -40,13 +40,25 @@
     <string name="tvMasukkanPasswordBaruLagi">Masukkan password baru lagi</string>
     <string name="btnSimpan">SIMPAN</string>
     <string name="tvMelapor">Melapor kejadian</string>
-    <string name="tvBelumPernah">Bapak/Ibu belum pernah melaporkan kejadian. Untuk melapor, silakan menekan tombol di bawah ini.</string>
+    <string name="tvBelumPernah">Bapak/Ibu belum pernah melaporkan kejadian. Untuk melapor, silakan menekan tombol di
+        bawah ini.
+    </string>
     <string name="tvLaporkanKeluhan">Laporkan Keluhan</string>
     <string name="tvLokasiFoto">Lokasi pengambilan foto</string>
-    <string name="tvBuatLaporSebelumUpload">Bapak/Ibu dapat melaporkan permasalahan sekolah atau putra/i anda. Masukan di bawah tidak wajib. Silakan diisi sesuai kebutuhan.</string>
+    <string name="tvBuatLaporSebelumUpload">Bapak/Ibu dapat melaporkan permasalahan sekolah atau putra/i anda. Masukan
+        di bawah tidak wajib. Silakan diisi sesuai kebutuhan.
+    </string>
     <string name="tvLaporFeedback">Fasilitas sekolah kurang memadahi</string>
     <string name="tvStatusLaporan">Status Laporan</string>
     <string name="tvMenunggu">Menunggu</string>
     <string name="tvDeskripsiLaporan">DeskripsiLaporan</string>
     <string name="tvIsiDeskripsiLap">Kursi dan meja yang tersedia tidak sesuai jumlah murid.</string>
+    <string name="tvServerError">Hai, sepertinya anda tidak terhubung dengan SiKawan. Coba cek koneksi anda</string>
+    <string name="tvJudul">Judul Laporan</string>
+    <string name="tvIsi">Mohon tenggang waktu pembaya ...</string>
+    <string name="tvFasilitas">Fasilitas sekolah kurang memadai</string>
+    <string name="tvStatusLaporan">Status Laporan</string>
+    <string name="tvStatus">Menunggu</string>
+    <string name="tvDeskripsi">Deskripsi Laporan</string>
+    <string name="tvISI">Kursi dan meja yang tersedia tidak sesuai jumlah murid.</string>
 </resources>

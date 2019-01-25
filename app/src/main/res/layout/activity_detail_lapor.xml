@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".DetailLaporActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/ToolbarAtas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:elevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ic_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/normal"
+                android:text="@string/tvLapor"
+                android:textColor="@color/colorBlue"
+                android:textSize="@dimen/sp20"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_back"
+                app:layout_constraintStart_toEndOf="@+id/ic_back"
+                app:layout_constraintTop_toTopOf="@+id/ic_back" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/fotokelas"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:src="@drawable/fotokelas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ToolbarAtas" />
+
+    <TextView
+        android:id="@+id/tvFasilitasSekolah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/normal"
+        android:text="@string/tvFasilitas"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/fotokelas"
+        app:layout_constraintStart_toStartOf="@+id/fotokelas"
+        app:layout_constraintTop_toBottomOf="@+id/fotokelas" />
+
+    <TextView
+        android:id="@+id/tvStatusLaporan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/bold"
+        android:text="@string/tvStatusLaporan"
+        app:layout_constraintStart_toStartOf="@+id/fotokelas"
+        app:layout_constraintTop_toBottomOf="@+id/tvFasilitasSekolah" />
+
+    <ImageView
+        android:id="@+id/imgStatus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ceklistbiru"
+        app:layout_constraintStart_toStartOf="@+id/tvStatusLaporan"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatusLaporan" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/normal"
+        android:text="@string/tvStatus"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgStatus"
+        app:layout_constraintStart_toEndOf="@+id/imgStatus"
+        app:layout_constraintTop_toTopOf="@+id/imgStatus" />
+
+    <TextView
+        android:id="@+id/tvDeskripsi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/bold"
+        android:text="@string/tvDeskripsi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imgStatus"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
+
+    <TextView
+        android:id="@+id/tvIsi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:fontFamily="@font/normal"
+        android:text="@string/tvISI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvDeskripsi"
+        app:layout_constraintTop_toBottomOf="@+id/tvDeskripsi" />
+
+</android.support.constraint.ConstraintLayout>

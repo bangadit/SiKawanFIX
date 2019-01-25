@@ -1,19 +1,12 @@
 package com.sikawan.sikawan
 
-import android.app.Activity
-import android.app.AlertDialog
 import android.content.Intent
-import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import com.sikawan.sikawan.profil.ProfilModel
-import com.sikawan.sikawan.service.LoginRespone
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_home.*
 import retrofit2.Call
-import retrofit2.Callback
 import retrofit2.Response
 
 class HomeActivity : AppCompatActivity() {

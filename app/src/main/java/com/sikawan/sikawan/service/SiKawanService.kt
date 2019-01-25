@@ -1,5 +1,7 @@
 package com.sikawan.sikawan.service
 
+import com.sikawan.sikawan.lapor.LaporModel
+import com.sikawan.sikawan.lapor.LaporRespone
 import com.sikawan.sikawan.profil.ProfilModel
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -24,7 +26,10 @@ interface SiKawanService {
     fun postLogin(@Body body: RequestBody): Call<LoginRespone>
 
     @GET("public/api/v1/get-my-profile")
-    fun getProfil() : Call<ProfilModel>
+    fun getProfil(): Call<ProfilModel>
+
+    @GET("public/api/v1/cek-lapor")
+    fun getLapor(): Call<LaporRespone>
 
 //    @GET("public/api/v1/get-my-profile")
 //    fun getAllPost() : Call<List<Post>

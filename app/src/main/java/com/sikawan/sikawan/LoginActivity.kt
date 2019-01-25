@@ -62,30 +62,16 @@ class LoginActivity : AppCompatActivity() {
         val username = edtNISN.text.toString()
         val password = edtPassword.text.toString()
         val requestBody = MultipartBody.Builder()
-            .setType(MultipartBody.FORM)
-            .addFormDataPart("username", username)
-            .addFormDataPart("password", password)
-            .build()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("username", username)
+                .addFormDataPart("password", password)
+                .build()
 
         MainApplication.service.postLogin(requestBody)
-            .enqueue(object : retrofit2.Callback<LoginRespone> {
-                override fun onFailure(call: Call<LoginRespone>?, t: Throwable?) {
-                    val toast =
-                        Toast.makeText(this@LoginActivity, "Gagal mengambil data dari server", Toast.LENGTH_LONG)
-                    toast.show()
-                    mDialog.dismiss()
-                    Log.e("eror", "getListPost: ${t?.message}")
-                }
-
-                override fun onResponse(call: Call<LoginRespone>?, response: Response<LoginRespone>?) {
-                    val loginRespone = response?.body()
-
-                    if (loginRespone?.message == "Login Successful") {
-                        masuk(loginRespone.access_token)
-                        mDialog.dismiss()
-                    } else {
+                .enqueue(object : retrofit2.Callback<LoginRespone> {
+                    override fun onFailure(call: Call<LoginRespone>?, t: Throwable?) {
                         val dialog = AlertDialog.Builder(this@LoginActivity)
-                        val dialogView = layoutInflater.inflate(R.layout.activity_alert, null)
+                        val dialogView = layoutInflater.inflate(R.layout.activity_alert_service, null)
                         dialog.setView(dialogView)
                         val buttonFinish = dialogView.findViewById<Button>(R.id.btnCoba)
                         val dialogShow = dialog.show()
@@ -96,9 +82,28 @@ class LoginActivity : AppCompatActivity() {
                         mDialog.dismiss()
                     }
 
-                }
+                    override fun onResponse(call: Call<LoginRespone>?, response: Response<LoginRespone>?) {
+                        val loginRespone = response?.body()
 
-            })
+                        if (loginRespone?.message == "Login Successful") {
+                            masuk(loginRespone.access_token)
+                            mDialog.dismiss()
+                        } else {
+                            val dialog = AlertDialog.Builder(this@LoginActivity)
+                            val dialogView = layoutInflater.inflate(R.layout.activity_alert, null)
+                            dialog.setView(dialogView)
+                            val buttonFinish = dialogView.findViewById<Button>(R.id.btnCoba)
+                            val dialogShow = dialog.show()
+
+                            buttonFinish.setOnClickListener {
+                                dialogShow.dismiss()
+                            }
+                            mDialog.dismiss()
+                        }
+
+                    }
+
+                })
 
     }
 }
