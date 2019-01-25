@@ -1,5 +1,7 @@
 package com.sikawan.sikawan.service
 
+import com.sikawan.sikawan.DetailLaporActivity
+import com.sikawan.sikawan.lapor.DetailLaporRespon
 import com.sikawan.sikawan.lapor.LaporModel
 import com.sikawan.sikawan.lapor.LaporRespone
 import com.sikawan.sikawan.profil.ProfilModel
@@ -30,6 +32,9 @@ interface SiKawanService {
 
     @GET("public/api/v1/cek-lapor")
     fun getLapor(): Call<LaporRespone>
+
+    @GET("public/api/v1/get-lapor-detail/{id}")
+    fun searchLapor(@Path("id") id: Int): Call<DetailLaporRespon>
 
 //    @GET("public/api/v1/get-my-profile")
 //    fun getAllPost() : Call<List<Post>

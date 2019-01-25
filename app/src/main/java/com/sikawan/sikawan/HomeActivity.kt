@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.sikawan.sikawan.profil.ProfilModel
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_detail_lapor.*
 import kotlinx.android.synthetic.main.activity_home.*
 import retrofit2.Call
 import retrofit2.Response

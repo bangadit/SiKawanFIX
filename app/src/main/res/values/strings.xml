@@ -57,7 +57,6 @@
     <string name="tvJudul">Judul Laporan</string>
     <string name="tvIsi">Mohon tenggang waktu pembaya ...</string>
     <string name="tvFasilitas">Fasilitas sekolah kurang memadai</string>
-    <string name="tvStatusLaporan">Status Laporan</string>
     <string name="tvStatus">Menunggu</string>
     <string name="tvDeskripsi">Deskripsi Laporan</string>
     <string name="tvISI">Kursi dan meja yang tersedia tidak sesuai jumlah murid.</string>
